@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seleccion Argentina</title>
+    <title>Hunt:Showdown</title>
+    <link rel="icon"href="https://i.redd.it/xu6ktlvikv761.png">
+    <link rel="stylesheet" href="style.css">
     <style>
+        * {
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family:  Bold;
             line-height: 1.6;
             padding: 20px;
+            background: linear-gradient(0deg, rgb(0, 0, 0),rgb(31, 29, 29),rgb(34, 33, 33), rgb(31, 30, 30), rgb(0, 0, 0));   
+            height: 100vh;
+            color: white;
         }
 
         h1 {
@@ -26,10 +36,47 @@
         .endpoint p {
             margin-bottom: 5px;
         }
+        .hunt {
+            position: absolute;
+            top: 40%;
+            left: 40%;
+            background-color: yellow;
+            width: 0px;
+            height:100px;
+            border-radius: 200px;
+            z-index: 1;
+            box-shadow: 125px 55px 300px 75px rgb(0, 0, 0);
+        }
+        .hunt img {
+            width: 300px;
+        }
     </style>
 </head>
 <body>
-    <h1>Seleccion Argentina</h1>
+    <h1 style="color: white;">Seleccion Argentina </h1>
+
+    <div class="formulario"> 
+         <h1>Login</h1>
+         <form method="post">
+            <div class="username">
+                <input type="text" required>
+                <label >Username</label>
+            </div>
+            <div class="password">
+                <input type="password" required>
+                <label >Password</label>
+            <div class="remember">Forgot your password?</div>
+            <input type="submit" value="Start">
+            <div class="signin">
+                I want to do the <a href="#">Chek in</a>
+            </div>
+
+            </div>
+         </form>
+    </div>
+    <div class="hunt">
+        <img src="https://www.huntshowdown.com/assets/img/logo-nav.png" alt="">
+    </div>
 
     <div class="endpoint">
         <h2>GET /</h2>
