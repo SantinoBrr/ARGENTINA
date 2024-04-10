@@ -54,6 +54,8 @@ app.get('/Brawlers', async (req, res) => {
   res.status(500).send({'error': 'Internal server error'})
   }})
 
+
+  
   app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
   });
