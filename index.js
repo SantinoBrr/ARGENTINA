@@ -42,8 +42,7 @@ app.get('/players/salary', async (req, res) => {
 })
 
 app.get('/version', async (req, res) => {
-  
-    res.status(500).json({ message:'La version actual es: 54.243'});
+    res.status(500).json('La version actual es: 54.243');
 })
 
 
