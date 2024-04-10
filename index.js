@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const path = require('path'); // Import path module
+const bodyParser = require('body-parser');
 
 const app = express();
 const port = 3000;
@@ -45,7 +46,19 @@ app.get('/version', async (req, res) => {
     res.status(500).json('La version actual es: 54.243');
 })
 
+app.put('/path', async (req, res) => {
+  try{
 
+    res.status(200).send({
+      "name": "Eduardo",
+      "edad": 11
+    });
+    
+
+  }catch(e){
+    res.status(500).send({'error': 'Internal server error'})
+  }
+})
 
 app.get('/Brawlers', async (req, res) => {
   try{
@@ -55,7 +68,7 @@ app.get('/Brawlers', async (req, res) => {
   }})
 
 
-  
+
   app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);
   });
