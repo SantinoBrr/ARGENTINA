@@ -41,10 +41,14 @@ app.get('/players/salary', async (req, res) => {
   })
 })
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
-
+app.get('/Version', async (req, res) => {
+  try{
+  
+    res.status(200).json({ message:'La version actual es: 54.243'});
+  }catch(e){
+    res.status(500).send({'error': 'Internal server error'})
+  }
+})
 
 app.get('/Brawlers', async (req, res) => {
   try{
@@ -52,3 +56,7 @@ app.get('/Brawlers', async (req, res) => {
 }catch(e){
   res.status(500).send({'error': 'Internal server error'})
   }})
+
+  app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+  });
