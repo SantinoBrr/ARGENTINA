@@ -44,3 +44,11 @@ app.get('/players/salary', async (req, res) => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
+
+
+app.get('/Guns', async (req, res) => {
+  try{
+  res.status(200).sendFile(path.join(__dirname, "Guns.html"));
+}catch(e){
+  res.status(500).send({'error': 'Internal server error'})
+  }})
