@@ -46,12 +46,13 @@ app.get('/version', async (req, res) => {
     res.status(500).json('La version actual es: 54.243');
 })
 
-app.put('/path', async (req, res) => {
+app.put('/Eduardo', async (req, res) => {
   try{
 
     res.status(200).send({
       "name": "Eduardo",
-      "edad": 11
+      "edad": 110
+    
     });
     
 
