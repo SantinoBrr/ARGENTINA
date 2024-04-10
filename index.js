@@ -41,14 +41,12 @@ app.get('/players/salary', async (req, res) => {
   })
 })
 
-app.get('/Version', async (req, res) => {
-  try{
+app.get('/version', async (req, res) => {
   
-    res.status(200).json({ message:'La version actual es: 54.243'});
-  }catch(e){
-    res.status(500).send({'error': 'Internal server error'})
-  }
+    res.status(500).json({ message:'La version actual es: 54.243'});
 })
+
+
 
 app.get('/Brawlers', async (req, res) => {
   try{
