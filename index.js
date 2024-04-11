@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Serve static files from the public directory
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'Public')));
 
 // -------------------------------------------- ENDPOINTS --------------------------------------------
 
@@ -63,7 +63,7 @@ app.put('/Eduardo', async (req, res) => {
 
 app.get('/Brawlers', async (req, res) => {
   try{
-  res.status(200).sendFile(path.join(__dirname, 'public', "Brawlers.html"));
+  res.status(200).sendFile(path.join(__dirname, 'Public', "Brawlers.html"));
 }catch(e){
   res.status(500).send({'error': 'Internal server error'})
   }})
