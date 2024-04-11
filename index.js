@@ -63,7 +63,7 @@ app.put('/Eduardo', async (req, res) => {
 
 app.get('/Brawlers', async (req, res) => {
   try{
-  res.status(200).sendFile(path.join(__dirname, "Brawlers.html"));
+  res.status(200).sendFile(path.join(__dirname, 'public', "Brawlers.html"));
 }catch(e){
   res.status(500).send({'error': 'Internal server error'})
   }})
